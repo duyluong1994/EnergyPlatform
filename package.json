@@ -1,0 +1,20 @@
+{
+  "name": "energy_platform",
+  "version": "1.0.0",
+  "description": "energy platform audit and auto units test",
+  "main": "index.js",
+  "scripts": {
+    "start-nodeos": "nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin --plugin eosio::http_plugin",
+    "reset-nodeos": "sh ./reset-nodeos.sh",
+    "test": "eoslime test"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "eosjs": "^20.0.3",
+    "eoslime": "^1.0.3"
+  }
+}

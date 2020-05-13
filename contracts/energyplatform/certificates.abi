@@ -1,0 +1,121 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "certificate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "covered_power",
+                    "type": "uint8"
+                },
+                {
+                    "name": "current_owner",
+                    "type": "name"
+                },
+                {
+                    "name": "current_state",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "mint",
+            "base": "",
+            "fields": [
+                {
+                    "name": "power",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "purchase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "certificate_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "purchaser",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "sale",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "certificate_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "send",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "certificate_id",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "mint",
+            "type": "mint",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "sale",
+            "type": "sale",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "send",
+            "type": "send",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "certificates",
+            "type": "certificate",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "purchases",
+            "type": "purchase",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}
