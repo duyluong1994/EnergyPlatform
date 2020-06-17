@@ -56,7 +56,7 @@ public:
     [[eosio::action]] void mint(uint8_t power)
     {
         require_auth(_self);
-        check(is_allowed_power(power), "available values is 0, 1, 2");
+        check(is_allowed_power(power), "available values is 1, 5, 10, 20");
 
         certificates _certificates(_self, _self.value);
         _certificates.emplace(_self, [&](auto &row) {
@@ -75,7 +75,7 @@ public:
         certificates _certificates(_self, _self.value);
         auto iterator = _certificates.find(certificate_id);
         check(iterator != _certificates.end(), "certificate with given id does not exist");
-        check(user.value == (*iterator).current_owner.value, "you are not owner of this sertificate");
+        check(user.value == (*iterator).current_owner.value, "you are not owner of this certificate");
         _certificates.modify(iterator, user, [&](auto &row) {
             row.current_state = S_MARKED_FOR_SALE;
         });
